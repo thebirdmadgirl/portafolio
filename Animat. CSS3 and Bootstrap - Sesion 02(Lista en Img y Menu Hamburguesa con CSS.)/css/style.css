@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: black;
+    position: fixed;
+    z-index:10000;
+    top: 0;
+    left: 0;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+h1{
+    color: white;
+    float: left;
+    margin: 10px;
+}
+.botonera{
+    float: right;
+}
+.botonera ul{
+    display: flex;
+    list-style: none;
+}
+.botonera a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px;
+}
+/* Estilos para el Banner */
+.banner{
+    position: relative;
+    background:url(../img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+.cont-banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+p{
+    font-size: 18px;
+    line-height: 30px;
+}
+button{
+    background: black;
+    color: white;
+    padding:10px 20px;
+    border:0 none;
+}
+/* Estilos para el Main */
+main{
+    width: 80%;
+    margin:20px auto;
+    padding-top: 50px;
+}
+main h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.img-responsive{
+    width: 450px;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+/* Estilos para Section */
+section{
+    width: 80%;
+    margin: auto;
+    /* Uso de Flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+article{
+    width: 350px;
+    margin-bottom: 10px;
+}
+article h2{
+    text-align: center;
+}
+/* Estilos para Asides */
+.fondo-asides{
+    margin:20px 0px;
+}
+.text-aside{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.asides{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+aside{
+    width: 300px;
+    margin-bottom: 10px;
+}
+aside h3{
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+/* Adoptame */
+.fondo-pets{
+    background: skyblue;
+    padding:10px 0px;
+}
+.text-pet{
+    text-align: center;
+    margin-bottom: 10px;
+    color: purple;
+}
+.pets{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pet{
+    width: 250px;
+    margin-bottom: 10px; 
+    text-align: center;
+}
+.img-pet{
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    border:5px solid yellow;
+    transition: 0.5s;
+}
+.img-pet:hover{
+    transform: rotate(3deg);
+    transition: 0.5s;
+}
+/* Estilos para Contactos */
+.fondo-contactos{
+    margin:20px 0px;
+}
+.text-contactos{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contactos{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact{
+    width: 400px;
+    margin-bottom: 10px;
+}
+.contact h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.listas li{
+    list-style-image: url(../img/vineta.png);
+    margin-bottom: 15px;
+}
+.mapa{
+    margin:20px auto;
+    width: 80%;
+}
+.text-map{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.fondo-footer{
+    background: black;
+    padding:20px 0px;
+    color: white;
+}
+.footer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#menu, #check{
+    display: none;
+}
+#check:checked ~ .botonera{
+    left: 0%;
+    transition: 0.5s ease-in-out;
+}
+/* Mediaqueries para Tablets */
+@media only screen and (max-width:980px){
+    #menu{
+        display: block;
+        float: right;
+        font-size: 24px;
+        margin: 23px;
+    }
+    .container, .cont-banner, main, section, .asides, .pets, .contactos{
+        width: 90%;
+    }
+    .botonera{
+        position: relative;
+        float: none;
+        left: -110%;
+        transition: 0.5s ease-in-out;
+    }
+    .botonera ul{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        background: black;
+        top: 70px;
+    }
+}
+/* mediaqueries para celulares */
+@media only screen and (max-width: 480px){
+        .container, .cont-banner, main, section, .asides, .pets, .contactos{
+            width: 90%;
+    }
+    article, aside{
+        width: 100%;
+        text-align: center;
+    }
+    .pet{
+        width: 100%;
+    }
+    .contact:nth-child(1){
+    margin-left: 50px;
+    }
+    footer p{
+        text-align: center;
+    }
+}
